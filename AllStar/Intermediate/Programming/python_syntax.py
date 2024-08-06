@@ -9,7 +9,7 @@
 字符串:
   1. 用一个或多个空格分割单词:     re.split(r"[ ]+",line1)
                                  params = str.split(":")
-  2. 替换/去掉字符串中特定支付：   re.sub(r"[,.;'?!]","",word)
+  2. 替换/去掉字符串中特定字符：   re.sub(r"[,.;'?!]","",word)
   3. 忽略大小写比较：             str1.lower() == str2.lower()     
 
 正则表达式：
@@ -39,14 +39,23 @@
                                             vals[j],vals[j+1]=vals[j+1],vals[j]      
 
   2. 找出list中字符串的最大长度:   max(len(s) for s in col1)                                        
-  3. 数组排序:                    list1.sort()
-  4. 数组子集判断：
+  3. 数组排序:                    list1.sort(reverse=false)
+     元组排序：                   sorted_tuple = tuple(sorted(original_tuple))
+  4. 数组自定义排序:              
+                                 original_list = [[3, 1], [5, 2], [4, 3]]
+                                 sorted_list = sorted(original_list, key=lambda x: x[0])     
+     元组自定义排序：            
+                                 original_tuple = ((3, 1), (5, 2), (4, 3))
+                                 sorted_tuple = tuple(sorted(original_tuple, key=lambda x: x[1]))    按元组第二项大小排序
+  5. 数组子集判断：
                                  def all_elements_in_array(array1, array2):
                                     set2 = set(array2)  
                                     for element in array1:
                                         if element not in set2:
                                             return False
                                     return True
+  6. 对列表进行去重               unique_list = list(set(original_list))
+     对元组进行去重               unique_tuple = tuple(set(original_tuple))
 
 
 语法：
