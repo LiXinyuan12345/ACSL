@@ -4,7 +4,7 @@
 
 输出：   
   1. 字符串左右对齐并填充特定字符:  str1.ljust(max_length_c2,'-')  or rjust()
-
+  2. 字符串格式化：                formatted_string = "姓名：{}，年龄：{}".format(name, age)
 
 字符串:
   1. 用一个或多个空格分割单词:     re.split(r"[ ]+",line1)
