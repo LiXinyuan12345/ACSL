@@ -1,6 +1,14 @@
 '''
 输入：
-  1.输入整数，并将其转换为列表：    list(map(int, input().split()))
+  1.输入整数，并将其转换为列表：     list(map(int, input().split()))
+  2.输入字符串，并将其转换为列表：   words = input().split()
+  3.读入多行文本并分词，直到空行结束 inputs = []
+                                  while True:
+                                      line = input()
+                                      if line:
+                                          inputs.extend(line.split() )
+                                      else:
+                                          break
 
 输出：   
   1. 字符串左右对齐并填充特定字符:  str1.ljust(max_length_c2,'-')  or rjust()
@@ -11,15 +19,15 @@
                                  params = str.split(":")
   2. 替换/去掉字符串中特定字符：   re.sub(r"[,.;'?!]","",word)
   3. 忽略大小写比较：             str1.lower() == str2.lower()     
-
+  4. 按字母表循环：               for i in range( ord('z'),ord('a')-1,-1):     print(chr(char_code), end=' ')
+  5. char数组转字符串:            word_match = ['-','y']    ''.join(word_match)
+  6. 查找字符是否在字符串中:       if 'a' in "aeiouAEIOU":
+  
 正则表达式：
   1. 换意符\的用法:               r'\(\)\[\]'
   2. findall一次找出所有匹配:     matches= re.findall(r'[\(\[][-]?[\d]+,[-]?[\d]+[\)\]]',line)
   3. 特定字符分词：               sentences = re.split(r"[.|?] ",text)
   4. 特定字符串匹配：             matched = re.match(r"[a-zA-Z_]+\w*$", text)
-
-
-
 
 
 数据结构：
@@ -43,7 +51,7 @@
      元组排序：                   sorted_tuple = tuple(sorted(original_tuple))
   4. 数组自定义排序:              
                                  original_list = [[3, 1], [5, 2], [4, 3]]
-                                 sorted_list = sorted(original_list, key=lambda x: x[0])     
+                                 sorted_list = sorted(original_list, key=lambda x: x[1]*10+x[0])     
      元组自定义排序：            
                                  original_tuple = ((3, 1), (5, 2), (4, 3))
                                  sorted_tuple = tuple(sorted(original_tuple, key=lambda x: x[1]))    按元组第二项大小排序
@@ -56,12 +64,16 @@
                                     return True
   6. 对列表进行去重               unique_list = list(set(original_list))
      对元组进行去重               unique_tuple = tuple(set(original_tuple))
+  7. 数组倒序                    list1.reverse()
 
 
 语法：
   1. 函数内引用全局变量:
                                 def reset(str):
                                     global letters,counter    
+  2. list初始化:                my_list = [0] * 100
+  3. 类似于c++ ?的语法：         1 if result[i][0]=='G' else 0
+
 '''
 
 
