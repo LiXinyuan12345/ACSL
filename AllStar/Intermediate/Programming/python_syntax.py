@@ -22,6 +22,12 @@
   4. 按字母表循环：               for i in range( ord('z'),ord('a')-1,-1):     print(chr(char_code), end=' ')
   5. char数组转字符串:            word_match = ['-','y']    ''.join(word_match)
   6. 查找字符是否在字符串中:       if 'a' in "aeiouAEIOU":
+  7. 查找支付在字符串中所有出现:   inex = -1
+                                 while True:
+                                    index = string.find(char, index + 1)
+                                    if index == -1:
+                                        break
+  8. 查找字符/子串出现次数:       str.count('G')  or  str.count("hello")
   
 正则表达式：
   1. 换意符\的用法:               r'\(\)\[\]'
@@ -65,6 +71,7 @@
   6. 对列表进行去重               unique_list = list(set(original_list))
      对元组进行去重               unique_tuple = tuple(set(original_tuple))
   7. 数组倒序                    list1.reverse()
+  8. find_first_greater         import bisect index = bisect.bisect_right(sorted_list, target)
 
 
 语法：
