@@ -1,7 +1,8 @@
 def postfix_to_infix(expression):
     stack = []
     operators = set(['+', '-', '*', '/'])
-    
+
+
     for char in expression:
         if char not in operators:  # 如果是操作数，直接入栈
             stack.append(char)

@@ -17,10 +17,10 @@ def infix_to_prefix(expression):
             stack.append(char)  # 将当前运算符入栈
     while stack:  # 将栈内剩余元素加入前缀表达式列表
         prefix.append(stack.pop())
-
+        
     return ''.join(prefix[::-1])  # 将前缀表达式列表反转并连接成字符串
 
-infix_expression = "(A+B^2)/A^2-A*C/B+A*B*C"
+infix_expression = "((a+b)^2-c)/(d+e*(b^2-a))"
 prefix_expression = infix_to_prefix(infix_expression)
 print("中缀表达式:", infix_expression)
 print("前缀表达式：", prefix_expression)
