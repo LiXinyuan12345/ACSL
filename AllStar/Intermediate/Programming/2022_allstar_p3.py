@@ -24,8 +24,8 @@ for word in inputs:
     for i in range( 5 ):
         if word_match[i] != 'G':
             for j in range(5):
-                if word[i] == target[j] and word_match[j] != 'G':
-                    word_match[i] = 'Y'
+                if word[i] == target[j] and word_match[j] == '-':
+                    word_match[j] = 'Y'
                     break
     result.append(''.join(word_match))
 
@@ -35,7 +35,7 @@ for word in inputs:
 matched = []
 for i in range(len(result)):
 
-    if result[i].count('G') > 0:
+    if result[i].count('G') > 0 or result[i].count('Y') > 0 :
         matched.append( (result[i].count('G'), 
                         result[i].count('Y'), 
                         1 if result[i][0]=='G' else 0,
@@ -44,9 +44,8 @@ for i in range(len(result)):
                         inputs[i] ,
                         result[i])   ) 
 
-sorted_matched = sorted(matched, key=lambda x: x[0]*10000+x[1]*1000+x[2]*100 + x[3]*10+x[4]) 
-sorted_matched.reverse()
-#print(matched)         
+sorted_matched = sorted(matched, key=lambda x: (-(x[0]*10000+x[1]*1000+x[2]*100 + x[3]*10+x[4]),x[5])) 
+#print(sorted_matched)         
 
 N = min(6,len(sorted_matched))
 sorted_matched= sorted_matched[:N]
