@@ -28,12 +28,14 @@ def line_2_ranges(line):
       vals.append( (start,end) )
   
   # bubble sort  
-  n= len(vals)
-  for i in range(n):
-      for j in range(0,n-i-1):
-          if vals[j][0] > vals[j+1][0]:
-              vals[j],vals[j+1]=vals[j+1],vals[j]
-  return vals
+#   n= len(vals)
+#   for i in range(n):
+#       for j in range(0,n-i-1):
+#           if vals[j][0] > vals[j+1][0]:
+#               vals[j],vals[j+1]=vals[j+1],vals[j]
+#   return vals
+  return sorted(vals,key=lambda x: x[0])
+
 
 
 #calc

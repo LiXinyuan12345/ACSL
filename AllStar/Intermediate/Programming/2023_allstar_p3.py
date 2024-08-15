@@ -35,13 +35,14 @@ for i in range(len(only_words)):
         col2.append( (only_words[i][0].lower(),i) )
 
 #sort he col2
-n= len(col2)
-for i in range(n):
-    for j in range(0,n-i-1):
-        if col2[j][0] > col2[j+1][0]: 
-            col2[j],col2[j+1]=col2[j+1],col2[j]
-        elif words[j][0] ==words[j+1][0] and words[j][1] > words[j+1][1] :
-            col2[j],col2[j+1]=col2[j+1],col2[j]
+# n= len(col2)
+# for i in range(n):
+#     for j in range(0,n-i-1):
+#         if col2[j][0] > col2[j+1][0]: 
+#             col2[j],col2[j+1]=col2[j+1],col2[j]
+#         elif words[j][0] ==words[j+1][0] and words[j][1] > words[j+1][1] :
+#             col2[j],col2[j+1]=col2[j+1],col2[j]
+col2 = sorted(col2, key=lambda x: x[0])    
 
 #find col1 and col3
 col1 = []
@@ -91,9 +92,9 @@ max_length_c2 = max(len(s) for s in col22)
 max_length_c3 = max(len(s) for s in col3)
 
 print(max_length_c2,max_length_c3)
-print(words)
+print("words = ",words)
 print("")
-print(only_words)
+print("only_words=", only_words)
 print("")
 
 for i in range(len(col2) ):

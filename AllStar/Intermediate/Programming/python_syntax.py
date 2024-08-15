@@ -61,6 +61,9 @@
      元组自定义排序：            
                                  original_tuple = ((3, 1), (5, 2), (4, 3))
                                  sorted_tuple = tuple(sorted(original_tuple, key=lambda x: x[1]))    按元组第二项大小排序
+     按元素的第一项数值升序，第二项字母顺序降序排列
+                                  my_list = [(1, 'apple'), (1, 'banana'), (2, 'orange'), (2, 'kiwi')]
+                                  sorted_list = sorted(my_list, key=lambda x: (x[0], x[1]), reverse=[False, True])                           
   5. 数组子集判断：
                                  def all_elements_in_array(array1, array2):
                                     set2 = set(array2)  
@@ -71,7 +74,9 @@
   6. 对列表进行去重               unique_list = list(set(original_list))
      对元组进行去重               unique_tuple = tuple(set(original_tuple))
   7. 数组倒序                    list1.reverse()
+                                result_word.sort(reverse=True)
   8. find_first_greater         import bisect index = bisect.bisect_right(sorted_list, target)
+  9. 抽取list中的结构中的某一项放到list中:  five_item_list = [t[4] for t in sorted_matched]
 
 
 语法：
