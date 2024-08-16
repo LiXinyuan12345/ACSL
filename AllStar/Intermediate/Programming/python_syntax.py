@@ -14,6 +14,7 @@
   1. 字符串左右对齐并填充特定字符:  str1.ljust(max_length_c2,'-')  or rjust()
   2. 字符串格式化：                formatted_string = "姓名：{}，年龄：{}".format(name, age)
 
+  
 字符串:
   1. 用一个或多个空格分割单词:     re.split(r"[ ]+",line1)
                                  params = str.split(":")
@@ -28,13 +29,23 @@
                                     if index == -1:
                                         break
   8. 查找字符/子串出现次数:       str.count('G')  or  str.count("hello")
+  9. 字符串去空格                str.lstrip() or str.lstrip() or str.strip()
   
+
 正则表达式：
   1. 换意符\的用法:               r'\(\)\[\]'
   2. findall一次找出所有匹配:     matches= re.findall(r'[\(\[][-]?[\d]+,[-]?[\d]+[\)\]]',line)
   3. 特定字符分词：               sentences = re.split(r"[.|?] ",text)
   4. 特定字符串匹配：             matched = re.match(r"[a-zA-Z_]+\w*$", text)
-
+  5. 分组匹配：                  line=["(5,10) (-5,2] [24,28][12,22)"]
+                                matches =  re.findall(r'(\[|\()(-?\d+),(-?\d+)(\]|\))',line)
+                                for match in matches:
+                                  if match:
+                                    print("{} {},{} {}".format(match[0],match[1],match[2],match[3]))
+  6. 常用字符：                  \d 数字		      \D 非数字[^\d]
+                                \s 空格TAB回车	  \S 非空格TAB回车[^\s]
+                                \w 字母、数字、_	\W 字母和数字[^\w]
+                                *: 0..*   +: 1..*    ?: 0..1   {m}:m次  {m,n}:m-n次
 
 数据结构：
   1. pair的用法:                vals.append( (start,end) )
