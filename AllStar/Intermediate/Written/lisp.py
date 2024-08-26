@@ -24,6 +24,5 @@ def REVERSE(ary):
 #M = [ 'P' ,['R','O'],['G',['R','A'],['M','M'],'I'],['N','G'] ]
 #print( CDR(CDR(CAR(CDR(CDR(M))))) )
         
-Z = [ 'C' ,['O','N'],['N',['E','C'],'T'],['I',['C',['U'],'T']] ]
-Y = CAR(REVERSE(CDR(CDR(Z))))
-print( CAR(CDR(CAR(CDR(Y)))))
+Z = [1,[2, [3,2,[1]], [2,[2],1] ]]
+print( REVERSE(CAR(CDR(CAR(CDR(Z))))))

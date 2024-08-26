@@ -54,6 +54,8 @@
   3. 用list实现stack:           numbers.append(5)  numbers.pop()
   4. 用list实现queue:           numbers.append(5)  numbers.pop(0)
   5. 深拷贝:                    import copy    copied = copy.deepcopy(from)
+  6. 哈希表:                    tinydict = {'a': 1, 'b': 2, 'b': '3'}
+                              tinydict['a'] = 8 /  del tinydict['a'] / tinydict.get('c')!= null
 
 算法：        
   1. 冒泡排序：        
@@ -73,8 +75,14 @@
                                  original_tuple = ((3, 1), (5, 2), (4, 3))
                                  sorted_tuple = tuple(sorted(original_tuple, key=lambda x: x[1]))    按元组第二项大小排序
      按元素的第一项数值升序，第二项字母顺序降序排列
-                                  my_list = [(1, 'apple'), (1, 'banana'), (2, 'orange'), (2, 'kiwi')]
-                                  sorted_list = sorted(my_list, key=lambda x: (x[0], x[1]), reverse=[False, True])                           
+                                 my_list = [(1, 'apple'), (1, 'banana'), (2, 'orange'), (2, 'kiwi')]
+                                 sorted_list = sorted(my_list, key=lambda x: (x[0], x[1]), reverse=[False, True])                           
+     自定义函数排序：                                  
+                                 from functools import cmp_to_key
+                                 def compare(x, y):
+                                    return len(x) - len(y)
+                                 words = ["apple", "banana", "kiwi", "cherry"]
+                                 sorted_words = sorted(words, key=cmp_to_key(compare))   
   5. 数组子集判断：
                                  def all_elements_in_array(array1, array2):
                                     set2 = set(array2)  

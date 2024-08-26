@@ -10,6 +10,6 @@ def prefix_to_infix(expression):
     return stack[0]  # 最终栈内剩下的元素即为中缀表达式
 
 prefix_expression = "+-/+A^B2^A2/*ACB**ABC"
-prefix_expression = "/-+/#2531#41+#131"
+prefix_expression = "#-*#2^32$*423-^62*340"
 infix_expression = prefix_to_infix(prefix_expression)
 print("中缀表达式：", infix_expression)

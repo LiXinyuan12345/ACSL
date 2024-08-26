@@ -33,6 +33,7 @@ def infix_to_postfix(expression):
 
 # 测试转换函数
 infix_expression = "((A*(B+C))/2)-(3*A+4)/(A-C)"
+infix_expression = "(5*(2*A+4))/(2*B-3)-7"
 postfix_expression = infix_to_postfix(infix_expression)
 print("中缀表达式:", infix_expression)
 print("后缀表达式:", postfix_expression)

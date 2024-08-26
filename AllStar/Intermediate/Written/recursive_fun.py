@@ -1,15 +1,14 @@
 import re
 
 def  f(x,y):
-   if x <y :
-      return f(x+1,y-2)+f(y,x)+1
-   elif x==y:
-      return f(f(x/2,y),x/2)-3
+   if x >=10:
+      return f( int(x/2),y-1)+3
+   elif x>5:
+      return 2*f(x+1,int(y/3))
    else:
-      return x-y
+      return x*y
 
-
-print( f(14,20) )
+print( f(24,6) )
 
    
         

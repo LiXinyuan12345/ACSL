@@ -58,7 +58,7 @@ def preorder_traversal(root):
 # 测试代码
 if __name__ == "__main__":
     
-    str = "CORONAVIRUS"
+    str = "DISHWASHER"
 
     root  = TreeNode(str[0])
     str1  = str[1:]
